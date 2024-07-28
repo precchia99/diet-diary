@@ -1,0 +1,36 @@
+ 
+diet-diary-user
+    user-id INT
+    name    VARCHAR(45)
+    email   VARCHAR(45)
+
+diet-diary-nutrition
+    food-id INT
+    name   VARCHAR(45)
+    calories    INT
+    carbs   INT
+    satFat  INT
+    transFat    INT
+    cholesterol INT
+    sodium  INT
+    dietFiber   INT
+    totalSugar  INT
+    addedSugar  INT
+    protein INT
+    calcium INT
+    iron    INT
+    potassium INT
+
+    more can be added
+
+diet-diary-logging
+    log-id  INT
+    user-id INT
+    date    DATETIME
+    food-id INT
+
+API Key:
+7e6921eb971a480385b58404f3eee02e
+Recipe ID:
+10 (fish)
+775585 (refried beans)

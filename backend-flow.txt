@@ -1,0 +1,49 @@
+|| SQLITE ||
+- add sqlite extension
+- open database, expand database botton left, run user
+
+|| FASTAPI ||
+- open terminal, 'cd BackEnd'- EVERYTIME
+- download python
+- 'python -m venv ./venv-diet-diary'- EVERYTIME
+-- creates venv-diet-diary folder (doesn't really matter)
+
+- '.\venv-diet-diary\Scripts\activate'  - EVERYTIME
+-- should see green words to the left
+
+- 'pip install fastapi'
+- 'pip install "uvicorn[standard]"'
+- 'pip install sqlmodel'
+- 'pip install pydantic[email]'
+- 'uvicorn main:app --reload' - EVERYTIME
+
+BACKEND READY!
+
+|| TEST IT ||
+- open index.html
+- log in
+- use the email in the database sqlite (john smith) - should log in
+- incorrect email won't work, in console it'll be null
+- try sign up
+- adding new account should log it into the sqlite database
+- using an existing email won't work
+
+|| What We NEED ||
+- Meals table on database.py file
+
+|| WORKFLOW ||
+- .html file connected to script.js file
+- script.js file has 'users' in url that is connected to main.py file (that file uses fastapi which is a python library that creates api)
+- main.py fastapi python code is able to go to sqlite database and pull the information that we need
+- it is able to do this by using the database.py file (uses sqlmodel which is a python libary that can connect & create database/tables - run top right)
+
+|| LINKS||
+- BugBytes FastAPI playlist
+- https://www.youtube.com/playlist?list=PL-2EBeDYMIbQghmnb865lpdmYyWU3I5F1
+- SQL Model with fastapi
+
+
+
+
+
+

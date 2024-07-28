@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/meal-tracker.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- The top navigation bar -->
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./goal-tracker.html">Goal Tracker</a>
+    </div>
+
+    <header>
+        <h1>Diet Diary</h1>
+    </header>
+
+    <div class="title">
+        <h2>Your Diary</h2>
+    </div>
+
+    <div id="addContainer">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMealModal">Add</button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Calories</th>
+                <th scope="col">Fat (g)</th>
+                <th scope="col">Carbs (g)</th>
+                <th scope="col">Protein (g)</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="mealBody">
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="addMealModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Add Meal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="mealDateTime" class="form-label">Date and Time:</label>
+                            <input type="datetime-local" class="form-control" id="mealDateTime">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mealType" class="form-label">Meal Type:</label>
+                            <select id="mealType" class="form-select" aria-label="Meal type select">
+                                <option value="Breakfast" selected></option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Lunch">Lunch</option>
+                                <option value="Dinner">Dinner</option>
+                                <option value="Dessert">Dessert</option>
+                                <option value="Snack">Snack</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mealDescription" class="form-label">Meal</label>
+                            <input type="text" class="form-control" id="mealDescription">
+                        </div>
+                        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="d-flex">
+                                <div class="toast-body">
+                                    Meal was not found!
+                                </div>
+                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addMeal()">Save changes</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">window.onload = getMeals();</script>
+</body>
+
+</html>

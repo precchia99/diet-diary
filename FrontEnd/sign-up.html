@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/sign-up.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./my-diet-diary.html">My Diet Diary</a>
+    </div>
+    <div class="container">
+        <div class="title-box">
+            <h1>- Sign Up -</h1>
+            <p>Please fill in this form to create an account.</p>
+        </div>
+
+        <form onsubmit="addUser(event)">
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="index.html">
+                <button type="button" class="btn btn-secondary">Cancel</button>
+            </a>
+        </form>
+        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Please use an email not in use.
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <div>Already have an account? <a href="log-in.html" class="link-primary">Login</a></div>
+    </div>
+
+    <script type="text/javascript" src="./bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

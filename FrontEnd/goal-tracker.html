@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/goal-tracker.css">
+    <title>Goal Tracker</title>
+</head>
+
+<body>
+    <!-- The top navigation bar -->
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./meal-tracker.html">My Diet Diary</a>
+    </div>
+
+    <div class="container">
+        <h1>Goal Tracker</h1>
+        <table>
+            <tr>
+                <td>
+                    <h2>Daily Calorie Goal (kcal) :</h2>
+                    <div class="editable-container">
+                        <span id="caloriesGoal" class="editable-text" contenteditable="true">0</span>
+
+                    </div>
+                </td>
+                <td>
+                    <canvas id="calories" width="200" height="200"></canvas>
+                </td>
+                <td>
+                    <h2>Daily Fat Goal (g) :</h2>
+                    <div class="editable-container">
+                        <span id="fatGoal" class="editable-text" contenteditable="true">0</span>
+
+                    </div>
+                </td>
+                <td>
+                    <canvas id="fat" width="200" height="200"></canvas>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Daily Protein Goal (g) :</h2>
+                    <div class="editable-container">
+                        <span id="proteinGoal" class="editable-text" contenteditable="true">0</span>
+
+                    </div>
+                </td>
+                <td>
+                    <canvas id="protein" width="200" height="200"></canvas>
+                </td>
+                <td>
+                    <h2>Daily Carbohydrates Goal (g) :</h2>
+                    <div class="editable-container">
+                        <span id="carbsGoal" class="editable-text" contenteditable="true">0</span>
+
+                    </div>
+                </td>
+                <td>
+                    <canvas id="carbs" width="200" height="200"></canvas>
+                </td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-primary" onclick="updateGoals()">Update Goals</button>
+    </div>
+
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">window.onload = getGoalTotals();</script>
+
+</body>
+
+</html>

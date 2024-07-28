@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/log-in.css">
+    <title>Spoonacular Test</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="script.js"></script>
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./my-diet-diary.html">My Diet Diary</a>
+    </div>
+    <div class="container">
+        <div class="title-box">
+            <h1>- Spoonacular Test -</h1>
+        </div>
+
+        <hr>
+
+        <label for="spoonid"><b>Spoonacular ID</b></label>
+        <input id="SpoonID" type="number" placeholder="Enter ID" name="spoonID" required>
+
+    </div>
+
+    <img id="foodPic" alt="Image of Food">
+    <div id="foodInfo"></div>
+
+    <div class="clearfix">
+        <button type="submit" class="spoonbtn" onclick="getSpoonacular()">Get Spoonacular Data</button>
+        <a href="index.html">
+            <button type="button" class="cancelbtn">Cancel</button>
+        </a>
+    </div>
+</body>
+
+</html>
+

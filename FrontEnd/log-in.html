@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/log-in.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about-us.html">About Us</a>
+        <a href="./my-diet-diary.html">My Diet Diary</a>
+    </div>
+    <div>
+        <div class="title-box">
+            <h1>- Log In -</h1>
+        </div>
+
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input id="Username" type="email" placeholder="Enter Email" name="email" required>
+
+    </div>
+
+    <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Username was incorrect!
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <div class="clearfix">
+        <button type="submit" class="loginbtn" onclick="getUser()">Log In</button>
+        <a href="index.html">
+            <button type="button" class="cancelbtn">Cancel</button>
+        </a>
+    </div>
+
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
